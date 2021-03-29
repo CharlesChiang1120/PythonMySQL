@@ -10,4 +10,4 @@
 
 **3.Jupyter container**
 
-`docker run -d --name PythonSQL -p 9000:8888 -v "$(pwd)":/home/jovyan/work jupyter/pyspark-notebook start-notebook.sh --NotebookApp.token=''`
+`docker run -d --name PythonSQL -p 8890:8888 --network PythonMySQL -v "$(pwd)":/home/jovyan/work jupyter/datascience-notebook start-notebook.sh --NotebookApp.token=''`
